@@ -12,10 +12,9 @@ class ViewController: UIViewController
 {
     var temp = 0.00
     var flag = 0
-    @IBOutlet weak var Bsee:UITextField!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+
+    @IBOutlet weak var clmA: UITextField!
+    
     @IBAction func number1(_ sender: Any)
     {
         clmA.text = clmA.text! + "1"
@@ -75,65 +74,68 @@ class ViewController: UIViewController
         
     }
     
-    @IBOutlet weak var clmA: UITextField!
+  
+   
  
     
     
     @IBAction func add(_ sender: Any)
     {
-        temp = Double (Bsee.text!)!
-        Bsee.text = ""
+        temp = Double (clmA.text!)!
+        clmA.text = ""
         flag = 1
     }
     @IBAction func minus(_ sender: Any)
     {
-        temp = Double (Bsee.text!)!
-        Bsee.text = ""
-        flag = 2    }
+        temp = Double (clmA.text!)!
+        clmA.text = ""
+        flag = 2
+        
+    }
     
     @IBAction func multiply(_ sender: Any)
     {
-        temp = Double (Bsee.text!)!
-        Bsee.text = ""
+        temp = Double (clmA.text!)!
+        clmA.text = ""
         flag = 3
     }
     
     @IBAction func divide(_ sender: Any)
     {
-        temp = Double (Bsee.text!)!
-        Bsee.text = ""
+        temp = Double (clmA.text!)!
+        clmA.text = ""
         flag = 4
     }
   
     @IBAction func C(_ sender: Any)
     {
-        
+        clmA.text = ""
     }
     @IBAction func sum(_ sender: Any)
     {
         if(flag == 1)
         {
             var sum = 0.00
-            sum = temp + Double(Bsee.text!)!
-            Bsee.text = "\(sum)"
+            sum = temp + Double(clmA.text!)!
+            clmA.text = "\(sum)"
         }
         if(flag == 2)
         {
             var sum = 0.00
-            sum = temp - Double(Bsee.text!)!
-            Bsee.text = "\(sum)"
+            sum = temp - Double(clmA.text!)!
+            clmA.text = "\(sum)"
         }
         if(flag == 3)
         {
             var sum = 0.00
-            sum = temp * Double(Bsee.text!)!
-            Bsee.text = "\(sum)"
+            sum = temp * Double(clmA.text!)!
+            clmA.text = "\(sum)"
         }
         if(flag == 4)
         {
             var sum = 0.00
-            sum = temp / Double(Bsee.text!)!
-            Bsee.text = "\(sum)"
+            sum = temp / Double(clmA.text!)!
+            clmA.text = "\(sum)"
         }
     }
    
